@@ -4,6 +4,13 @@
   --font-syne: 'Syne', sans-serif;
   --font-syne-mono: 'Syne Mono', monospace;
   --font-fraunces: 'Fraunces', serif;
+
+  --animate-float: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: rotate(-2deg) translateY(0); }
+  50%       { transform: rotate(-2deg) translateY(-8px); }
 }
 
 body {
