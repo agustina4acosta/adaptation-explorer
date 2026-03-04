@@ -1,7 +1,9 @@
+import Home from "./pages/home"
+
 function App() {
   return (
     <>
-      <h1>Adaptation Explorer</h1>
+      <Home />
     </>
   )
 }
