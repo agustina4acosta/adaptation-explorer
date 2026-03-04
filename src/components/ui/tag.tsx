@@ -1,6 +1,6 @@
 import { cva, type VariantProps } from "class-variance-authority";
 import type { JSX } from "react";
-import { cn } from "../lib/utils";
+import { cn } from "../../lib/utils";
 
 const eyebrowTagVariants = cva(
   "inline-flex items-center gap-2 px-2 py-1 rounded text-[0.78rem] font-bold tracking-[0.12em] uppercase",
