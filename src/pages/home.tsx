@@ -1,12 +1,15 @@
 import RetroPoster from "../components/book";
 import Header from "../components/layout/header";
-import Search from "../components/search";
+
 import EyebrowTag from "../components/ui/tag";
 import StatsRibbon from "../components/statsRibbon";
 import { useAdaptations } from "../hooks/useAdaptations";
 import { useIMDbData } from "../hooks/useIMDbData";
+import Search from "../components/filters/search";
+import { useSearchStore } from "../store/useSearchStore";
 
 const Home = () => {
+  const query = useSearchStore((s) => s.query);
   const { data: adaptations } = useAdaptations();
   const { data: imdbData } = useIMDbData();
 
@@ -56,7 +59,7 @@ const Home = () => {
             <RetroPoster />
           </div>
         </section>
-        <StatsRibbon stats={stats} />
+        {query && <StatsRibbon stats={stats} />}
       </div>
     </>
   );

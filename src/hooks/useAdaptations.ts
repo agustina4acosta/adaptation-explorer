@@ -1,4 +1,4 @@
-import { useQuery } from "@tanstack/react-query"
+import { useQuery, keepPreviousData } from "@tanstack/react-query"
 import { fetchAdaptations } from "../lib/wikidata"
 import { useSearchStore } from "../store/useSearchStore"
 
@@ -9,5 +9,6 @@ export const useAdaptations = () => {
     queryKey: ["adaptations", query],
     queryFn:  () => fetchAdaptations(query),    
     enabled:  !!query,
+    placeholderData: keepPreviousData,
   })
 }

@@ -21,12 +21,28 @@ const eyebrowTagVariants = cva(
 interface EyebrowTagProps extends VariantProps<typeof eyebrowTagVariants> {
   text: string;
   icon?: JSX.Element;
+  dot?: string;
+  count?: number;
   className?: string;
 }
 
-const EyebrowTag = ({ text, icon, variant, className }: EyebrowTagProps) => (
+const EyebrowTag = ({
+  text,
+  icon,
+  dot,
+  count,
+  variant,
+  className,
+}: EyebrowTagProps) => (
   <div className={cn(eyebrowTagVariants({ variant }), className)}>
-    {icon} {text}
+    {dot && (
+      <span
+        className="w-2 h-2 rounded-full flex-shrink-0"
+        style={{ background: dot }}
+      />
+    )}
+    ¨{icon} {text}
+    {count && <span className="font-['Fraunces'] italic">{count}</span>}
   </div>
 );
 

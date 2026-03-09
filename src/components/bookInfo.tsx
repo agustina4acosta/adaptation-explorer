@@ -13,7 +13,7 @@ const BookInfo = ({ book }: BookCardProps) => (
         <img
           src={book.cover}
           alt={book.title}
-          className="w-full h-64 object-cover rounded"
+          className="w-full h-44 object-cover rounded"
         />
       )}
 

@@ -1,5 +1,6 @@
 import { useState } from "react"
-import { useSearchStore } from "../store/useSearchStore"
+import { useSearchStore } from "../../store/useSearchStore"
+
 
 const Search = () => {
     const [input, setInput] = useState("")
